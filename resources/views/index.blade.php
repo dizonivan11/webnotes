@@ -14,8 +14,8 @@
 <body>
     <div id="login-modal" class="container">
         <div class="row">
-            <div id="login-modal-image" class="col col-md-6 col-lg-6"><div></div></div>
-            <div id="login-modal-content" class="col col-md-6 col-lg-6">
+            <div id="login-modal-image" class="col-sm-12 col-md-6 col-lg-6"><div></div></div>
+            <div id="login-modal-content" class="col-sm-12 col-md-6 col-lg-6">
                 <h1>Webnotes</h1>
                 @if (session("msg") != null)
                     @if (session("msg-mood") != null)
@@ -26,7 +26,7 @@
                         {{ session("msg") }}
                     </div>
                 @endif
-                <form action="{{ action('LoginController@Login') }}" method="POST" autocomplete="off">
+                <form action="{{ action('LoginController@login') }}" method="POST" autocomplete="off">
                     {{ csrf_field() }}
                     <label for="user-id">Username</label>
                     <input type="text" name="user-id" id="user-id" required>

@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
-{
-    function Index(Request $r) {
+class HomeController extends Controller {
+    function index(Request $r) {
         if (session("user") != null) {
             return view("home");
         } else {
